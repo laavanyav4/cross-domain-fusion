@@ -1,0 +1,24 @@
+class CrossDomainFusion:
+    def __init__(self, numerical_data, textual_data):
+        self.numerical_data = numerical_data
+        self.textual_data = textual_data
+
+    def fuse_data(self):
+        fused_data = []
+        for num, text in zip(self.numerical_data, self.textual_data):
+            fused_data.append((num, text))
+        return fused_data
+
+
+numerical_data = [10, 20, 30, 40, 50]
+
+
+textual_data = ['apple', 'banana', 'cherry', 'date', 'elderberry']
+
+
+fusion = CrossDomainFusion(numerical_data, textual_data)
+fused_data = fusion.fuse_data()
+
+
+for item in fused_data:
+    print(item)
